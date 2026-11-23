@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resource Shelf Validation QA</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <script src="validate.js"></script>
+</head>
+<body>
+  <h1>Validation checks</h1>
+  <p>Open the browser console to see the test results.</p>
+  <script>
+    const tests = [
+      { input: { title: "", subject: "Maths" }, expected: "Title must be between 3 and 60 characters." },
+      { input: { title: "ab", subject: "Maths" }, expected: "Title must be between 3 and 60 characters." },
+      { input: { title: "x".repeat(61), subject: "Maths" }, expected: "Title must be between 3 and 60 characters." },
+      { input: { title: "Algebra Notes", subject: "Maths" }, expected: "" },
+      { input: { title: "History Essay", subject: "" }, expected: "Please choose a subject." },
+      {
+        input: {
+          title: "algebra notes",
+          subject: "maths",
+          resources: [{ title: "Algebra Notes", subject: "Maths" }]
+        },
+        expected: "Already on your shelf"
+      }
+    ];
+
+    console.table(tests.map(({ input, expected }) => {
+      const actual = validateForm(input);
+      return {
+        input: JSON.stringify(input),
+        expected,
+        actual,
+        result: actual === expected ? "PASS" : "FAIL"
+      };
+    }));
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/jobportal/recruiters/company/update/
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"email\":\"atul@gmail.com\",\r
+
+    \    \"password\":\"at123456\"\r
+
+    }"
+order: 4477434544372950

@@ -1,0 +1,37 @@
+Aapke system mein initially 3 roles honge.
+
+👨‍💻 Candidate
+
+Candidate:
+
+Register karega
+Profile banayega
+Skills add karega
+Projects add karega
+Resume upload karega
+Tests dega
+Jobs search karega
+Jobs apply karega
+Application track karega
+Skill gap dekhega
+🏢 Recruiter
+
+Recruiter:
+
+Company profile banayega
+Jobs create karega
+Required skills define karega
+Candidates dekhega
+Match score dekhega
+Applications manage karega
+Candidate shortlist/reject karega
+👨‍💼 Admin
+
+Admin:
+
+Users manage karega
+Companies manage karega
+Jobs manage karega
+Tests/questions manage karega
+Reports dekhega
+Suspicious activity manage karega

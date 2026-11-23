@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resource Shelf</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+  <script src="validate.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Resource Shelf</h1>
+    <p class="intro">Keep track of useful study resources.</p>
+
+    <form id="resourceForm">
+      <label for="title">Resource title</label>
+      <input id="title" name="title" type="text" autocomplete="off">
+
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject">
+        <option value="">Choose a subject</option>
+        <option value="Maths">Maths</option>
+        <option value="Science">Science</option>
+        <option value="English">English</option>
+        <option value="History">History</option>
+      </select>
+
+      <p id="formError" role="alert" aria-live="polite"></p>
+      <button type="submit">Add to shelf</button>
+    </form>
+
+    <section aria-labelledby="shelfHeading">
+      <h2 id="shelfHeading">My resources</h2>
+      <ul id="resourceList"></ul>
+    </section>
+  </main>
+</body>
+</html>

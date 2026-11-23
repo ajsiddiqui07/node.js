@@ -1,0 +1,9 @@
+$kind: http-request
+description: ""
+url: http://127.0.0.1:8000/jobportal/auth/user/
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{json_web_token_0646}}"
+order: 4488183342978362
